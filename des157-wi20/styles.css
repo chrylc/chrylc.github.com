@@ -1,0 +1,93 @@
+body{
+    width: 1200px;
+    margin: auto;
+}
+
+
+/* typography */
+h1, h3{
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-weight: 700;
+}
+
+h2, p, a, ul li {
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-weight: 400;
+}
+
+/* header */
+header{
+    padding: 45px;
+    background-color: rgb(194, 165, 149);
+}
+
+header h1, header h2{
+    color: white;
+}
+
+header h1{
+    font-size: 6em;
+}
+
+/* footer */
+footer{
+    padding: 20px 45px;
+    background-color: rgb(194, 165, 149);
+}
+
+footer p, footer a{
+    color: white;
+    text-decoration: none;
+}
+
+/* main */
+main{
+    padding: 60px 45px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#one {
+    flex: 1;
+}  
+#two{
+    flex: 1;
+}
+#three{
+    flex: 1;
+}
+
+main h3{
+    font-size: 32px;
+	line-height: 50px;
+	color: #000;
+}
+
+/* lists */
+main ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+main ul li a {
+	display: block;
+	color: #000;
+	font-family: 'Raleway', sans-serif;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+	letter-spacing: 1px;
+    line-height: 50px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+main ul li a:hover {
+    color:  rgb(194, 165, 149);
+}
+
+section ul{
+    border-left: 6px solid rgb(194, 165, 149);
+}
