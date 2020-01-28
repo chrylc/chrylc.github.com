@@ -1,0 +1,22 @@
+body{
+    width: 800px;
+    margin: auto;
+}
+
+h1,h2,h3,p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(64, 81, 128);
+}
+
+h1{
+    font-size: 3em;
+}
+
+p{
+    font-size: 1.2em;
+    line-height: 1.8em;
+}
+
+img{
+    padding-bottom: 20px;
+}
