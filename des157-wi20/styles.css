@@ -3,6 +3,11 @@ body{
     margin: auto;
 }
 
+#mySketch{
+    width: 1100px;
+	height: 250px;
+	margin-bottom: 20px;
+}
 
 /* typography */
 h1, h3{
@@ -20,7 +25,7 @@ h2, p, a, ul li {
 /* header */
 header{
     padding: 45px;
-    background-color: rgb(194, 165, 149);
+    background-color: rgb(224, 205, 195);
 }
 
 header h1, header h2{
