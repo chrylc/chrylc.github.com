@@ -3,7 +3,7 @@ body{
     margin: auto;
 }
 
-h1,h2,h3,p{
+h1,h2,h3,p,li{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(64, 81, 128);
 }
@@ -12,17 +12,28 @@ h1{
     font-size: 3em;
 }
 
-p{
+p, li{
     font-size: 1.2em;
     line-height: 1.8em;
     padding-bottom: 30px;
 }
 
+
 img{
     padding: 30px 0;
+    
 }
 
 a{
     text-decoration: none;
     color: rgb(64, 81, 128);
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style-type: none;
 }
