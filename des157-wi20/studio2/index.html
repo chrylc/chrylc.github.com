@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Class Essentials</title>
+</head>
+<body>
+    <h1>Cheryl's Class Essentials</h1>
+    <h2>Click on images to learn more!</h2>
+    <section id="items">
+        <section id="hydro"><img src="images/hydro.png"></section>
+        <section id="coffee"><img src="images/coffee.png"></section>
+        <section id="kanken"><img src="images/kanken.png"></section>
+    </section>
+    <div id="text"></div>
+    <footer>
+        <a href="mailto:cncai@ucdavis.edu">Email</a>
+        <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+    </footer>
+    
+    <script>
+    var hydro = document.querySelector("#hydro");
+    var coffee = document.querySelector('#coffee');
+    var kanken = document.querySelector('#kanken');
+    var mydiv = document.getElementById("text");
+
+    hydro.addEventListener('click', function(){
+        mydiv.style.display = 'block';
+        mydiv.innerHTML="<p>I always carry my 40oz hydroflask wherever I go! I used to never be thirsty but having a cute hydroflask really prompts me to drink as much water as I can. My personal goal is to finish two in one day. Although it's large, I think having water at all times has impacted my health in a positive way.</p>";
+    });
+
+    coffee.addEventListener('click', function(){
+        mydiv.style.display = 'block';
+        mydiv.innerHTML="<p>I am not the best at sleeping on time so consequently I'm not the best at waking up for classes. Therefore, on days I have early classes (-ahem DES 157), I will use a little caffiene to wake me up! My favorite coffee from the CoHo is the sweet and creamy cold brew. I HIGHLY reccomend!</p>";
+    });
+
+    kanken.addEventListener('click', function(){
+        mydiv.style.display = 'block';
+        mydiv.innerHTML="<p>I love my pink Kanken backpack! I've been using this since high school (way before it was cool) and it's been with me everywhere, from Korea to New York to Hawaii. Although it looks small, you'd be surprised at how much it can hold--including my hydroflask!</p>";
+    });
+    </script>
+</body>
+</html>
