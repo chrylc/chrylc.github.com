@@ -1,0 +1,115 @@
+body{
+    width: 400px;
+    margin: auto;
+}
+
+#description{
+    padding-top: 60px;
+}
+
+img{
+    padding-bottom: 10px;
+}
+
+/* #quit{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    width: 900px;
+
+    border: 2px solid #EA9F9F;
+    background-color: white;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#EA9F9F;
+	font-family: "open sans";
+	font-size:14px;
+	padding:5px 10px;
+	text-decoration:none;
+} */
+
+#or{
+    font-family: "gaegu";
+}
+
+/* typography */
+h1, h2, h3 {
+    font-family: "Gaegu";
+    color: #5B4143;
+}
+
+h4, p{
+    font-family: "Open Sans";
+    color: #5B4143;
+}
+
+h1{
+    font-size: 64px;
+    line-height: 1em;
+    background: url("images/piggy2.png") right bottom no-repeat;;
+}
+
+h2{
+    font-size: 36px;
+}
+
+/* button */
+
+.button{
+    background-color:#EA9F9F;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: "open sans";
+	font-size:14px;
+	padding:8px 15px;
+	text-decoration:none;
+}
+
+/* scoreboard */
+#scoreboard{
+    background-color:#FFE9EA;
+    border-radius:10px;
+    display: block;
+	color:#5B4143;
+	font-family: "gaegu";
+	font-size:36px;
+	padding:20px 30px;
+    text-decoration:none;
+    margin-top: 30px;
+}
+
+
+@media(min-width: 800px){
+    body{
+        width: 800px;
+        margin: auto;
+    }
+    h1{
+
+    }
+    #container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #right{
+        flex: 1;
+    }
+    #left{
+        flex: 1;
+    }
+
+    h1{
+        font-size: 72px;
+        line-height: 1em;
+        background: url("images/piggy2.png") 25% bottom no-repeat;;
+    }
+    #gamecontrol{
+        text-align: center;
+    }
+    
+
+}
