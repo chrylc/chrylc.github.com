@@ -1,6 +1,7 @@
 body{
     width: 800px;
     margin: auto;
+    padding-bottom: 200px;
 }
 
 h1,h2,h3,p{
@@ -19,4 +20,25 @@ p{
 
 img{
     padding-bottom: 20px;
+}
+
+footer{
+    background-color: rgb(255, 255, 255);
+    border-top: solid 2px rgb(221, 221, 221);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    padding: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(64, 81, 128);
+}
+
+footer a{
+    text-align: center;
+    padding-right: 15px;
+    font-size: 10pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(64, 81, 128);
 }
