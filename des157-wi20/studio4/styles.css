@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(253, 232, 232);
+    padding: 0 30px;
+    width: 900px;
+    margin: auto;
+    padding-bottom: 300px;
+  }
+
+h1, h2, h3, h4, p, a{
+    font-family: "gaegu";
+    color: rgb(92, 78, 73);
+}
+
+h1{
+    font-size: 48px;
+}
+
+footer{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    padding: 24px;
+}
+
+footer a{
+    text-align: center;
+    padding-right: 15px;
+    font-size: 12pt;
+    color: rgb(92, 78, 73);
+    text-decoration: none;
+}
+
+/* images */
+
+#catto{
+    height: 50vh;
+    position: fixed;
+    right: 250px;
+    top: 300px;
+}
+
+#can{
+    height: 10vh;
+    position: fixed;
+    left: 300px;
+    top: 200px;
+}
+#cantext{
+    position: fixed;
+    left: 310px;
+    top: 260px;
+}
+
+#bowl{
+    height: 10vh;
+    position: fixed;
+    left: 200px;
+    top: 350px;
+}
+#bowltext{
+    position: fixed;
+    left: 250px;
+    top: 410px;
+}
+
+#treats{
+    height: 10vh;
+    position: fixed;
+    left: 250px;
+    top: 500px;
+}
+#treatstext{
+    height: 10vh;
+    position: fixed;
+    left: 265px;
+    top: 560px;
+}

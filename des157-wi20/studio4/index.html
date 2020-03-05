@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu:700|Open+Sans&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Class Essentials</title>
+</head>
+<body>
+    <h1>Feed Pepper! (my cat)</h1>
+    <h2>Drag the food to pepper.</h2>
+    <div><img id="catto" src="images/catback.png"></div>
+    <section id="items">
+        <section><img id="can" src="images/can.png"></section>
+        <section><img id="bowl" src="images/bowl.png"></section>
+        <section><img id="treats" src="images/treats.png"></section>
+    </section>
+
+    <section id="infoText" class="description">
+        <p id="cantext" class="candes"></p>
+        <p id="bowltext" class="bowldes"></p>
+        <p id="treatstext" class="treatsdes"></p>
+    </section>
+
+    <div id="text"></div>
+    <footer>
+        <a href="mailto:cncai@ucdavis.edu">Email</a>
+        <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+    </footer>
+    
+    <script>
+    var cat = document.querySelector("#catto")
+    var can = document.querySelector("#can");
+    var bowl = document.querySelector('#bowl');
+    var treats = document.querySelector('#treats');
+    var cantext = document.querySelector('#cantext');
+    var bowltext = document.querySelector('#bowltext');
+    var treatstext = document.querySelector('#treatstext');
+
+    cat.addEventListener('mouseover', function() {
+        cat.src = "images/catfront.png";
+    });
+    cat.addEventListener('mouseout', function() {
+        cat.src = "images/catback.png";
+    });
+
+    can.addEventListener('mouseover', function() {
+        cantext.innerHTML =
+            "<p>wet food</p>";
+    });
+    can.addEventListener('mouseout', function() {
+        cantext.innerHTML =
+            "<p></p>";
+    });
+  
+    bowl.addEventListener('mouseover', function() {
+        bowltext.innerHTML =
+            "<p>kibble</p>";
+    });
+    bowl.addEventListener('mouseout', function() {
+        bowltext.innerHTML =
+            "<p></p>";
+    });
+
+    treats.addEventListener('mouseover', function() {
+        treatstext.innerHTML =
+            "<p>treats</p>";
+    });
+    treats.addEventListener('mouseout', function() {
+        treatstext.innerHTML =
+            "<p></p>";
+    });
+    </script>
+</body>
+</html>
