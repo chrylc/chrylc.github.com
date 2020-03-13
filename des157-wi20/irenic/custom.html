@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Spartan:500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Irenic Breathing</title>
+</head>
+<body>
+    
+        <div class="logo"><img class="logosmall" src="images/logo-light.png"></div>
+        
+        <h2 id="customh2">custom settings</h2>
+
+    <!-- slider settings! -->
+    <div id="settingsdiv">
+        
+        <!-- inhale -->
+        <div class="parent">
+            <p class="customP">inhale time</p>      <p class="displayslider" id="inhaledisplay">4</p>
+        </div>
+
+        <div class="slidecontainer">
+            <input type="range" min="1" max="8" value="4" class="slider" id="inhaleTime">
+        </div>
+        
+        <!-- hold -->
+        <div class="parent">
+            <p class="customP">hold time</p>        <p class="displayslider" id="holddisplay">4</p>
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="0" max="8" value="4" class="slider" id="holdTime">
+        </div>
+        
+
+        <!-- exhale -->
+        <div class="parent">
+            <p class="customP">exhale time</p>      <p class="displayslider" id="exhaledisplay">4</p>
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="8" value="4" class="slider" id="exhaleTime">
+        </div>
+        
+
+        <!-- session -->
+        <div class="parent">
+            <p class="customP">session time</p>     <p class="displayslider" id="sessiondisplay">1</p>
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="8" value="1" class="slider" id="sessionTime">
+        </div>
+        
+    </div>
+
+    <!-- radial buttons -->
+    <div id="audiochoice">
+    <p>audio</p>
+        <div id="customizetimer_intro" class="customizeradio">
+            
+            <input type="radio" id="audio1" name="timerintro" value="threemin" required>
+            <label for="audio1">voice</label>
+            <input type="radio" id="audio2" name="timerintro" value="fivemin">
+            <label for="audio2">background music</label>
+            <input type="radio" id="audio3" name="timerintro" value="tenmin">
+            <label for="audio3">no audio</label>
+        </div>
+    </div>
+
+    <!-- buttons to next page -->
+        <div id="settingsbttn">
+            <div><p id="settingsbuttondark"><a href="#" onclick="nextpage()">next</a></p></div>
+        </div>
+
+
+    <script>
+    var inhaleSlider = document.getElementById("inhaleTime");
+    var holdSlider = document.getElementById("holdTime");
+    var exhaleSlider = document.getElementById("exhaleTime");
+    var sessionSlider = document.getElementById("sessionTime");
+    
+    inhaleSlider.onchange = function(){
+        //console.log(inhaleSlider.value);
+        document.getElementById("inhaledisplay").innerHTML = inhaleSlider.value;
+    };
+
+    holdSlider.onchange = function(){
+        document.getElementById("holddisplay").innerHTML = holdSlider.value;
+    };
+    
+    exhaleSlider.onchange = function(){
+        document.getElementById("exhaledisplay").innerHTML = exhaleSlider.value;
+    };
+
+    sessionSlider.onchange = function(){
+        document.getElementById("sessiondisplay").innerHTML = sessionSlider.value;
+    };
+
+    function nextpage(){
+        var inhale = inhaleSlider.value;
+        var hold = holdSlider.value;
+        var exhale = exhaleSlider.value;
+        var session = sessionSlider.value;
+
+        window.open("settings.html?inhale=" + inhale + "&hold=" + hold + "&exhale=" + exhale + "&session=" + session, "_self")
+    };
+
+   
+    </script>
+</body>
+</html>

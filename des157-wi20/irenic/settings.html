@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Spartan:500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Irenic Breathing</title>
+</head>
+<body>
+    <div class="logo"><img class="logosmall" src="images/logo-light.png"></div>
+    <h2 id="customh2">
+        session settings
+    </h2>
+    <!-- empty p's for getParameterByName to display -->
+    <div class="parent" id="firstparent">
+        <p class="settingname">inhale time:</p>     <p class="settingnumber" id="inhaleconfirm"></p>
+    </div>    
+    <div class="parent">    
+        <p class="settingname">hold time:</p>     <p class="settingnumber" id="holdconfirm"></p>
+    </div>    
+    <div class="parent">    
+        <p class="settingname">exhale time:</p>     <p class="settingnumber" id="exhaleconfirm"></p>
+    </div>    
+    <div class="parent">    
+        <p class="settingname">session length:</p>     <p class="settingnumber" id="sessionconfirm"></p>
+    </div>
+
+    <!-- buttons to go to app -->
+    <div class="bttn">
+        <div id="twobttn">
+            <ul>
+                <li><a href="#" onclick="startpage()">start</a></li>
+                <li><a id="buttonlight" href="custom.html">custom</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+    function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, '\\$&');
+				var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+					results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, ' '));
+			}
+
+        document.getElementById("inhaleconfirm").innerHTML = getParameterByName("inhale") + " sec";
+        document.getElementById("holdconfirm").innerHTML = getParameterByName("hold") + " sec";
+        document.getElementById("exhaleconfirm").innerHTML = getParameterByName("exhale") + " sec";
+        document.getElementById("sessionconfirm").innerHTML = getParameterByName("session") + " min";
+
+
+    function startpage(){
+        window.open("breathing.html" + window.location.search, "_self")
+    };
+    </script>
+</body>
+</html>

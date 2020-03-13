@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Spartan:500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Irenic Breathing</title>
+</head>
+<body>
+    <!-- empty h1 to display big text-->
+    <h1 class="h1" id="breathingH1"></h1>
+    
+    <div id="line"></div>
+
+    <!-- empty div for the boxes to display -->
+    <div class="breathingbox">
+        <div class="growingbox" id="inhalebox">
+            <div id="inhale-expander"></div>
+        </div>
+
+        <div class="growingbox" id="holdbox">
+            <div id="hold-expander"></div>
+        </div>
+
+        <div class="growingbox" id="exhalebox">
+            <div id="exhale-expander"></div>
+        </div>
+    </div>
+    
+
+    <script>
+    function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, '\\$&');
+				var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+					results = regex.exec(url);
+				if (!results) return null;
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, ' '));
+			}
+
+    
+    
+    var inhaleseconds = parseInt(getParameterByName("inhale"));
+    var holdseconds = parseInt(getParameterByName("hold"));
+    var exhaleseconds = parseInt(getParameterByName("exhale"));
+    var totalminutes = parseInt(getParameterByName("session"));
+
+    // select the inhale-expander
+    var inhalediv = document.getElementById("inhale-expander");
+    
+
+    // USED TO EXIT THE PAGE
+    /* setTimeout(function(){
+        window.open("end.html", "_self")
+    }, (totalminutes*60000)); */
+
+    //USED TO SLEEP
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+/* demo();
+
+    function sleep(milliseconds) {
+        const date = Date.now();
+        let currentDate = null;
+        do {
+            currentDate = Date.now();
+        } while (currentDate - date < milliseconds);
+    } */
+
+
+
+
+        async function RunInhale() {
+            document.getElementById("breathingH1").innerHTML = "INHALE";
+            for (var i = 0; i <= inhaleseconds; ++i) {
+
+                // i=0, i=1, i=2, 3, 4, ... inhaleseconds
+
+                // set the style of inhale expander
+                inhalediv.style.height = (i*100 / inhaleseconds).toString() + "%";
+
+                await sleep(1000); // pause for 1 second
+            }
+        }
+    
+
+
+    // run infintently, because the timeout will kick us out of this page
+   // while (true) {
+
+    // INHALE BLOCK START
+        RunInhale()
+    // INHALE BLOCK END
+
+    // HOLD BLOCK START
+
+    // HOLD BLOCK END
+
+    // EXHALE BLOCK START
+
+    // EXHALE BLOCK END
+
+    // reset all heights back to zero
+    
+    //}
+
+
+    // for (var i=0; i<inhaleseconds.length; i++){
+    //     div = document.getElementById("inhalebox");
+    //     const newdivs = document.createTextNode('<div class="boxes"></div>');
+    //     div.appendChild(newdivs);
+    // }
+
+    // for (var i=0; i<numloops.length; i++){ //this is the big loop that tells us how many times we repeat
+    //     var boxes = document.querySelectorAll(".boxes");
+    //     var numBoxes = boxes.length;
+    //     var boxHeight = (375)/numBoxes;
+    //     for(var i=0; i<boxes.length; i++){
+    //         boxes[i].style.height = Math.ceil(boxHeight) + "px";
+    //         boxes[i].style.bottom = boxHeight * i + "px";
+    //     }
+
+    //     function fadeIn(){
+    //         if(counter < numBoxes){
+    //             setTimeout( function(){
+    //                 boxes[counter].style.opacity = 1;
+    //                 counter++;
+    //                 fadeIn();
+    //             }, 1000);
+    //         }
+    //         else {
+    //             //hold();
+
+    //             /* you need to run hold AFTER all the inhale boxes have been faded in */
+    //         } 
+    //     }
+
+    //     fadeIn();
+
+    // }
+//for the inhale: set h1 to "inhale"
+//divide the div into inhaleseconds number of boxes
+//fade them in one by one for 1 sec each
+//setTimeout for inhaleseconds seconds and start hold
+//repeat for hold and exhale
+
+
+
+
+
+
+
+
+
+/*
+
+    var totalSeconds = totalminutes*60000;
+    while (totalSeconds > 0) {
+        var timeToInhale = 4;
+        var boxdiv = document.getElementById("breathingbox");
+        var incrementalHeight = 375 / 4
+        while (timeToInhale > 0) {
+            //set the div height to incremental height
+            /* var increasethis = document.getElementById("growingbox");
+            for (var i=0; i<timeToInhale.length; i++){
+                increasethis.style.height = incrementalHeight;
+            }, 1000; */
+/*
+            setInterval(function(){
+                for (var i=0; i<timeToInhale.length; i++){
+                increasethis.style.height = incrementalHeight;
+                }
+            }, 1000);
+
+            timeToInhale--;
+
+            
+        }
+
+        var timeToHold = holdseconds;
+        var boxdiv = document.getElementById("breathingbox");
+        var incrementalHeight = boxdiv.height / holdseconds
+        while (timeToHold > 0) {
+            //set the div height to incremental height
+            var increasethis = document.getElementById("growingbox");
+            for (var i=0; i<timeToHold.length; i++){
+                increasethis.style.height = incrementalHeight;
+            };
+            timeToHold--;
+        }
+
+        //sleep(holdseconds);
+        var timeToExhale = exhaleSeconds
+        var incrementalHeight = div.height / exhaleSeconds
+        while(exhaleSeconds > 0) {
+            //decrease heigt by the incremental height
+            sleep(1000);
+            exhaleSeconds--;
+        }
+        totalSeconds -= inhaleseconds+holdseconds+exhaleseconds;
+    }
+   
+
+*/
+
+
+
+    /*
+    var totalSeconds = totalminutes*60000;
+    while (totalSeconds > 0) {
+        var timeToInhale = inhaleseconds;
+        var incrementalHeight = div.height / inhaleseconds
+        while (timeToInhale > 0) {
+            //set the div height to incremental height
+            sleep(1000);
+            timeToInhale--;
+        }
+        sleep(holdseconds);
+        var timeToExhale = exhaleSeconds
+        var incrementalHeight = div.height / exhaleSeconds
+        while(exhaleSeconds > 0) {
+            //decrease heigt by the incremental height
+            sleep(1000);
+            exhaleSeconds--;
+        }
+        totalSeconds -= inhaleseconds+holdseconds+exhaleseconds;
+    }
+    */
+
+
+
+
+
+
+    /*
+    var totalSeconds = totalminutes*60000;
+    while (totalSeconds > 0) {
+        var timeToInhale = inhaleseconds;
+        var boxdiv = document.getElementById("breathingbox");
+        var incrementalHeight = boxdiv.height / inhaleseconds
+        while (timeToInhale > 0) {
+            //set the div height to incremental height
+            var increasethis = document.getElementById("growingbox");
+            for (var i=0; i<timeToInhale.length; i++){
+                increasethis.style.height = incrementalHeight;
+            };
+            timeToInhale--;
+        }
+
+        var timeToHold = holdseconds;
+        var boxdiv = document.getElementById("breathingbox");
+        var incrementalHeight = boxdiv.height / holdseconds
+        while (timeToHold > 0) {
+            //set the div height to incremental height
+            var increasethis = document.getElementById("growingbox");
+            for (var i=0; i<timeToHold.length; i++){
+                increasethis.style.height = incrementalHeight;
+            };
+            timeToHold--;
+        }
+
+        //sleep(holdseconds);
+        var timeToExhale = exhaleSeconds
+        var incrementalHeight = div.height / exhaleSeconds
+        while(exhaleSeconds > 0) {
+            //decrease heigt by the incremental height
+            sleep(1000);
+            exhaleSeconds--;
+        }
+        totalSeconds -= inhaleseconds+holdseconds+exhaleseconds;
+    }
+   
+   */
+
+
+
+    /* while (True){
+        for (i=0; i<inhaleseconds.length; i++){
+            (i/inhaleseconds.length) + "%";
+        };
+        for (i=0; i<holdseconds.length; i++){
+            (i/holdseconds.length) + "%";
+        };
+        for (i=0; i<exhaleseconds.length; i++){
+            (i/exhaleseconds.length) + "%";
+        };
+    } */
+    
+    
+    
+    </script>
+</body>
+</html>
